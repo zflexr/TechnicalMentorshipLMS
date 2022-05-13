@@ -98,13 +98,62 @@ section#header .hero .asset img {
   font-weight: bolder;
 }
 
-#courses .courses .course a {
+#courses .courses .course button {
+  outline: none;
+  border: none;
   background-color: #6C63FF;
   color: #fff;
   padding: 10px;
   text-decoration: none;
   text-align: center;
   font-size: 13px;
+}
+
+.addCourse {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.addCourse form {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  padding: 20px 0;
+  gap: 15px;
+}
+
+.addCourse form div {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.addCourse form div input,
+.addCourse form div textarea {
+  width: 100%;
+  outline: none;
+  border: 1px solid #6C63FF;
+  padding: 5px;
+}
+
+.addCourse form button {
+  width: 90%;
+  margin: 0 auto;
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: #6C63FF;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 footer {
