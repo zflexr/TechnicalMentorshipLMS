@@ -6,18 +6,19 @@ let coursesContainer = document.querySelector('.courses')
 
 fetchCourses(coursesLink)
 
+
+
 function fetchCourses(link) {
     axios.get(coursesLink)
         .then(response => {
             let datas = response.data;
-
             datas.forEach(data => {
                 let courseEl = document.createElement('div')
                 courseEl.classList.add('course')
                 courseEl.innerHTML = `
                 <img src="${data.image}">
                 <p>${data.title}</p>
-                <button>View Course</button>
+                <button onClick = "handleClick('${data._id}')">View Course</button>
             `
                 coursesContainer.appendChild(courseEl)
             })
@@ -27,7 +28,10 @@ function fetchCourses(link) {
 }
 
 
-const id = localStorage.setItem('eduID')
+function handleClick(id) {
+    localStorage.setItem("eduID", id)
+    window.location.replace('http://127.0.0.1:5500/course.html')
+}
 
 
 // Add New Course
