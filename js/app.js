@@ -30,7 +30,7 @@ function fetchCourses(link) {
 
 function handleClick(id) {
     localStorage.setItem("eduID", id)
-    window.location.replace('http://127.0.0.1:5500/course.html')
+    window.location.replace('https://6283c80741ab065ce4cb37f4--startling-duckanoo-23c999.netlify.app/course.html')
 }
 
 
